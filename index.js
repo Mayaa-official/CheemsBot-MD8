@@ -231,16 +231,18 @@ XeonLft = await getBuffer(ppuser)
                 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
-                xeonbody = `┌─❖
-│「 𝗛𝗶 👋 」
-└┬❖ 「  @${xeonName.split("@")[0]}  」
-   │✑  𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 
-   │✑  ${metadata.subject}
-   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
-   │✑ ${xmembers}th
-   │✑  𝗝𝗼𝗶𝗻𝗲𝗱 : 
-   │✑ ${xtime} ${xdate}
-   └───────────────┈ ⳹`
+                xeonbody = `*ආවඩා ආයුබෝවන්*❕
+
+${xeonytimewisher} 😄💓
+
+👋 *${metadata.subject} වෙත   ${pushname} සාදරයෙන් පිළිගන්නවා....*🧡🤝
+
+👨‍👩‍👧‍👧 *සාමාජිකයන් ${xmembers}ක් සිටී*
+✅ *ඔබ සම්බන්ද වූයේ ${xtime} දින ${xdate}*
+⏱️ *වේගය* *${latensie.toFixed(4)}miliseconds*
+🈂️ *හිමිකරු ${ownernumber}*
+
+🔅${global.botname}🔅`
 XeonBotInc.sendMessage(anu.id,
  { text: xeonbody,
  contextInfo:{
@@ -251,7 +253,7 @@ XeonBotInc.sendMessage(anu.id,
 "body": `${ownername}`,
  "previewType": "PHOTO",
 "thumbnailUrl": ``,
-"thumbnail": XeonWlcm,
+"thumbnail": s.readFileSync("./XeonMedia/theme/wlc.jpg"),
 "sourceUrl": `${wagc}`}}})
                 } else if (anu.action == 'remove') {
                 	const xeonbuffer = await getBuffer(ppuser)
@@ -259,16 +261,18 @@ XeonBotInc.sendMessage(anu.id,
 	                const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 	let xeonName = num
                     const xeonmembers = metadata.participants.length
-                    xeonbody = `┌─❖
-│「 𝗚𝗼𝗼𝗱𝗯𝘆𝗲 👋 」
-└┬❖ 「 @${xeonName.split("@")[0]}  」
-   │✑  𝗟𝗲𝗳𝘁 
-   │✑ ${metadata.subject}
-   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
-   │✑ ${xeonmembers}th
-   │✑  𝗧𝗶𝗺𝗲 : 
-   │✑  ${xeontime} ${xeondate}
-   └───────────────┈ ⳹`
+                    xeonbody = `*සුභ දවසක් වේවා..*❕
+
+${xeonytimewisher} 😄💓
+
+👋 *${metadata.subject} සමූහය, ${pushname} හැර ගියේය*🧡🤝
+
+👨‍👩‍👧‍👧 *සාමාජිකයන් ${xmembers}ක් සිටී*
+❎ *හැර ගියේ ${xtime} දින ${xdate}*
+⏱️ *වේගය* *${latensie.toFixed(4)}miliseconds*
+🈂️ *හිමිකරු ${ownernumber}*
+
+🔅${global.botname}🔅`
 XeonBotInc.sendMessage(anu.id,
  { text: xeonbody,
  contextInfo:{
@@ -279,7 +283,7 @@ XeonBotInc.sendMessage(anu.id,
 "body": `${ownername}`,
  "previewType": "PHOTO",
 "thumbnailUrl": ``,
-"thumbnail": XeonLft,
+"thumbnail": fs.readFileSync("./XeonMedia/theme/left.jpg"),
 "sourceUrl": `${wagc}`}}})
 } else if (anu.action == 'promote') {
 const xeonbuffer = await getBuffer(ppuser)
